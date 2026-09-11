@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#080a0d" />
+  <title>TRANSFORMERS: Rift Assault</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="grain"></div>
+  <main id="intro">
+    <section class="hero">
+      <div class="insignia" aria-hidden="true"><i></i><b></b><span></span></div>
+      <p class="eyebrow">CYBERTRON DEFENSE NETWORK // EARTH SECTOR</p>
+      <h1>RIFT<br><em>ASSAULT</em></h1>
+      <p class="brief">Decepticon harvesters have breached the Chicago perimeter. Drop into the fracture, transform, and hold the line.</p>
+      <div class="actions">
+        <button id="play"><span>PLAY ON DESKTOP</span><small>WASD · MOUSE · T TO TRANSFORM</small></button>
+        <div id="vr-slot"></div>
+      </div>
+      <p id="xr-note">Quest 3: open this page in Meta Quest Browser, then choose ENTER VR.</p>
+    </section>
+    <aside>
+      <p>FIELD MANUAL</p>
+      <ol>
+        <li><b>MOVE</b><span>Left stick / WASD</span></li>
+        <li><b>FIRE</b><span>Trigger / Click</span></li>
+        <li><b>TRANSFORM</b><span>Grip / T</span></li>
+      </ol>
+      <div class="status"><i></i> RIFT SIGNAL ACQUIRED</div>
+    </aside>
+  </main>
+
+  <div id="hud" hidden>
+    <header><div class="brand">AUTOBOT // <b>RIFT ASSAULT</b></div><div id="mode">BIPED MODE</div></header>
+    <div class="reticle"><i></i><b></b></div>
+    <div class="threat"><span>THREAT INDEX</span><b id="wave">WAVE 01</b></div>
+    <div class="score"><span>HOSTILES NEUTRALIZED</span><b id="kills">000</b></div>
+    <div class="energy"><span>ENERGON</span><div><i id="energy-bar"></i></div></div>
+    <div id="notice">DEFEND THE RIFT</div>
+  </div>
+  <div id="damage"></div>
+  <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.166.1/build/three.module.js"}}</script>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
